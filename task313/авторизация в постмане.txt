@@ -1,0 +1,64 @@
+Авторизация:
+http://localhost:8081/?email=admin&password=admin
+
+добавление юзера: (с 2-мя ролями)
+{
+        "firstName": "Лило",
+        "lastName": "Лололо",
+        "email": "5555@mail.ru",
+        "password": "$2a$10$yTN7pfgIfnqQ/CZ99/yJwuFxl/er3lyvjBRRVgBeAzGiS/sxebt.S",
+        "enabled": true,
+        "roles": [
+
+            {
+                "id": 1,
+                "name": "ROLE_ADMIN",
+                "authority": "ROLE_ADMIN"
+            },
+            {
+                "id": 2,
+                "name": "ROLE_USER",
+                "authority": "ROLE_USER"
+            }
+        ]
+    }
+
+
+получение списка юзеров: http://localhost:8081/api/list
+
+Update Useroв: http://localhost:8081/api/update/1-5
+{
+        "id":"3",
+        "firstName": "Имя новое",
+        "lastName": "Фамилия новая",
+        "email": "noviy@mail.ru",
+        "password": "$2a$10$yTN7pfgIfnqQ/CZ99/yJwuFxl/er3lyvjBRRVgBeAzGiS/sxebt.S",
+        "enabled": true,
+        "roles": [
+            {
+                "id": 2,
+                "name": "ROLE_USER",
+                "authority": "ROLE_USER"
+            }
+        ]
+    }
+
+удалить пользователя: http://localhost:8081/api/delete
+
+{
+        "id":"3",
+        "firstName": "Имя новое",
+        "lastName": "Фамилия новая",
+        "email": "noviy@mail.ru",
+        "password": "$2a$10$yTN7pfgIfnqQ/CZ99/yJwuFxl/er3lyvjBRRVgBeAzGiS/sxebt.S",
+        "enabled": true,
+        "roles": [
+            {
+                "id": 2,
+                "name": "ROLE_USER",
+                "authority": "ROLE_USER"
+            }
+        ]
+    }
+
+
